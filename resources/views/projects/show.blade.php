@@ -9,8 +9,9 @@
         <div class="d-flex justify-content-between align-items-center mb-2">
             <h3 class="mb-0">
                 {{ $project->title }}
-                <small class="text-muted fs-6">(Proyek Terverifikasi)</small>
-            </h3>
+                <small class="text-muted fs-6">(Verified)</small>
+                <span class="badge bg-warning text-dark">Rating Pengguna</span>
+            </h3>   
             <div>
                 <span class="badge bg-warning text-dark me-1">
                     ★ {{ $project->ratings->count() ? number_format($project->ratings->avg('score'), 1) : 'Belum ada' }} / 5
